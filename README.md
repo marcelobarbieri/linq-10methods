@@ -1,10 +1,10 @@
-# 10 métodos do LINQ que todo programador .NET precisa saber
+# 10 LINQ methods that every .NET programmer needs to know
 
 [![](./Assets/Images/youtube.png)](https://www.youtube.com/watch?v=b0g2noP5BzU)
 
 ## 1. First
 
-> Recuperar o primeiro registro encontrado
+> Recover the first record found
 
 ```
 dotnet new console -o First
@@ -18,12 +18,12 @@ using System.Collections.Generic;
 using System.Linq;
 
 var fruits = new List<string>();
-fruits.Add("Cereja");
-fruits.Add("Abacaxi");
-fruits.Add("Maçã");
-fruits.Add("Pessego");
-fruits.Add("Mirtilo");
-fruits.Add("Coco");
+fruits.Add("Cherry");
+fruits.Add("Pineapple");
+fruits.Add("Litter");
+fruits.Add("Peach");
+fruits.Add("Blueberry");
+fruits.Add("Coconut");
 fruits.Add("Banana");
 
 Console.WriteLine(fruits.First()); 
@@ -32,11 +32,11 @@ Console.WriteLine(fruits.First());
 ```
 dotnet run
 
-Cereja
+Cherry
 ```
 ### 1.1. FirstOrDefault
 
-> Recuperar o primeiro registro encontrado ou o valor padrão
+> Recover the first record found or the default value
 
 ```
 dotnet new console -o FirstOrDefault
@@ -50,26 +50,26 @@ using System.Collections.Generic;
 using System.Linq;
 
 var fruits = new List<string>();
-// fruits.Add("Cereja");
-// fruits.Add("Abacaxi");
-// fruits.Add("Maçã");
-// fruits.Add("Pessego");
-// fruits.Add("Mirtilo");
-// fruits.Add("Coco");
+// fruits.Add("Cherry");
+// fruits.Add("Pineapple");
+// fruits.Add("Litter");
+// fruits.Add("Peach");
+// fruits.Add("Blueberry");
+// fruits.Add("Coconut");
 // fruits.Add("Banana");
 
-Console.WriteLine(fruits.FirstOrDefault("Não encontrado")); 
+Console.WriteLine(fruits.FirstOrDefault("Not found")); 
 ```
 
 ```
 dotnet run
 
-Não encontrado
+Not found
 ```
 
 ## 2. Any
 
-> Verificar se um elemento existe
+> Check if an element exists
 
 ```
 dotnet new console -o Any
@@ -83,15 +83,15 @@ using System.Collections.Generic;
 using System.Linq;
 
 var fruits = new List<string>();
-fruits.Add("Cereja");
-fruits.Add("Abacaxi");
-fruits.Add("Maçã");
-fruits.Add("Pessego");
-fruits.Add("Mirtilo");
-fruits.Add("Coco");
+fruits.Add("Cherry");
+fruits.Add("Pineapple");
+fruits.Add("Litter");
+fruits.Add("Peach");
+fruits.Add("Blueberry");
+fruits.Add("Coconut");
 fruits.Add("Banana");
 
-Console.WriteLine(fruits.Any(x => x == "Cereja"));
+Console.WriteLine(fruits.Any(x => x == "Cherry"));
 // fruits.Where(x => x == "").Count() == 1;
 ```
 
@@ -103,7 +103,7 @@ True
 
 ## 3. All
 
-> Verificar se todos os elementos são de um tipo
+> Check that all elements are of a type
 
 ```
 dotnet new console -o All
@@ -117,15 +117,15 @@ using System.Collections.Generic;
 using System.Linq;
 
 var fruits = new List<string>();
-fruits.Add("Cereja");
-fruits.Add("Cereja");
-fruits.Add("Cereja");
-fruits.Add("Cereja");
-fruits.Add("Cereja");
-fruits.Add("Cereja");
+fruits.Add("Cherry");
+fruits.Add("Cherry");
+fruits.Add("Cherry");
+fruits.Add("Cherry");
+fruits.Add("Cherry");
+fruits.Add("Cherry");
 
-Console.WriteLine(fruits.All(x => x == "Cereja"));
-//Console.WriteLine(fruits.All(x => x.Idade > 18));
+Console.WriteLine(fruits.All(x => x == "Cherry"));
+//Console.WriteLine(fruits.All(x => x.Age > 18));
 ```
 
 ```
